@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
  before_action :correct_user, only: [:edit]
- 
+
   def index
     @user = User.find(current_user.id)
     @books = Book.all
@@ -11,6 +11,7 @@ class BooksController < ApplicationController
     @book_new = Book.new
     @book = Book.find(params[:id])
     @user = @book.user
+    @book_comment = BookComment.new
   end
 
 
@@ -56,7 +57,7 @@ class BooksController < ApplicationController
   def correct_user
   @book = Book.find(params[:id])
   @user = @book.user
-  redirect_to(books_path) unless @user == current_user 
+  redirect_to(books_path) unless @user == current_user
   end
 
 

@@ -17,7 +17,11 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .form-control {
   display: block;
   width: 100%;
@@ -45,4 +49,19 @@
 }
 #error_explanation {
   color: red;
+}
+.comment-list {
+  list-style-type: none;
+}
+.comment-user {
+  display: inline;
+}
+.book-comment-area {
+  width: 100%;
+}
+.already-favorite {
+  color: red;
+}
+.no-favorite {
+  color: blue;
 }
